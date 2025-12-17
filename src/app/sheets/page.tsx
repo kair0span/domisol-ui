@@ -90,7 +90,7 @@ export default async function Sheet() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {sheets.map((sheet, index) => (
               <div
-                key={sheet.url}
+                key={`${sheet.title}-${index}`}
                 className="h-full transition-all duration-300 hover:translate-y-[-4px] group animate-fade-in-card"
                 style={{
                   animationDelay: `${Math.min(index * 50, 300)}ms`,
